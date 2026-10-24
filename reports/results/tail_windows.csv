@@ -1,0 +1,43 @@
+window,strategy,pnl_usd,worst_day_usd,worst_week_usd,max_dd_usd,recovery_bdays
+Aug-2015 (China deval),"Short front, always",,,,,
+Aug-2015 (China deval),"Short front, contango filter",,,,,
+Aug-2015 (China deval),+ spike exit,,,,,
+Aug-2015 (China deval),+ spike exit + stop,,,,,
+Aug-2015 (China deval),Calendar 1:1 (short VX1 / long VX2),,,,,
+Aug-2015 (China deval),Calendar beta-weighted,,,,,
+Aug-2015 (China deval),"Spike exit + stop, vol-targeted",,,,,
+Feb-2018 (Volmageddon),"Short front, always",-9905.00,-17600.00,-19700.00,-20900.00,452.00
+Feb-2018 (Volmageddon),"Short front, contango filter",0.00,0.00,0.00,0.00,
+Feb-2018 (Volmageddon),+ spike exit,0.00,0.00,0.00,0.00,
+Feb-2018 (Volmageddon),+ spike exit + stop,0.00,0.00,0.00,0.00,
+Feb-2018 (Volmageddon),Calendar 1:1 (short VX1 / long VX2),0.00,0.00,0.00,0.00,
+Feb-2018 (Volmageddon),Calendar beta-weighted,0.00,0.00,0.00,0.00,
+Feb-2018 (Volmageddon),"Spike exit + stop, vol-targeted",0.00,0.00,0.00,0.00,
+Mar-2020 (Covid),"Short front, always",-35635.00,-15250.00,-36705.00,-67680.00,273.00
+Mar-2020 (Covid),"Short front, contango filter",0.00,0.00,0.00,0.00,
+Mar-2020 (Covid),+ spike exit,0.00,0.00,0.00,0.00,
+Mar-2020 (Covid),+ spike exit + stop,0.00,0.00,0.00,0.00,
+Mar-2020 (Covid),Calendar 1:1 (short VX1 / long VX2),0.00,0.00,0.00,0.00,
+Mar-2020 (Covid),Calendar beta-weighted,0.00,0.00,0.00,0.00,
+Mar-2020 (Covid),"Spike exit + stop, vol-targeted",0.00,0.00,0.00,0.00,
+Aug-2024 (yen carry),"Short front, always",1057.80,-10245.90,-16126.40,-16126.40,8.00
+Aug-2024 (yen carry),"Short front, contango filter",1546.00,-990.90,-52.50,-990.90,2.00
+Aug-2024 (yen carry),+ spike exit,1546.00,-990.90,-52.50,-990.90,2.00
+Aug-2024 (yen carry),+ spike exit + stop,1546.00,-990.90,-52.50,-990.90,2.00
+Aug-2024 (yen carry),Calendar 1:1 (short VX1 / long VX2),-148.20,-252.90,-314.40,-314.40,inf
+Aug-2024 (yen carry),Calendar beta-weighted,-436.21,-136.34,-433.59,-436.21,inf
+Aug-2024 (yen carry),"Spike exit + stop, vol-targeted",1546.00,-990.90,-52.50,-990.90,2.00
+Apr-2025 (tariff shock),"Short front, always",-9125.70,-7318.30,-18293.40,-20196.50,79.00
+Apr-2025 (tariff shock),"Short front, contango filter",0.00,0.00,0.00,0.00,
+Apr-2025 (tariff shock),+ spike exit,0.00,0.00,0.00,0.00,
+Apr-2025 (tariff shock),+ spike exit + stop,0.00,0.00,0.00,0.00,
+Apr-2025 (tariff shock),Calendar 1:1 (short VX1 / long VX2),0.00,0.00,0.00,0.00,
+Apr-2025 (tariff shock),Calendar beta-weighted,0.00,0.00,0.00,0.00,
+Apr-2025 (tariff shock),"Spike exit + stop, vol-targeted",0.00,0.00,0.00,0.00,
+2026 shock (Mar-2026),"Short front, always",-1250.70,-3992.00,-6329.60,-10283.70,32.00
+2026 shock (Mar-2026),"Short front, contango filter",-14.60,-52.50,-52.50,-52.50,19.00
+2026 shock (Mar-2026),+ spike exit,0.00,0.00,0.00,0.00,
+2026 shock (Mar-2026),+ spike exit + stop,0.00,0.00,0.00,0.00,
+2026 shock (Mar-2026),Calendar 1:1 (short VX1 / long VX2),0.00,0.00,0.00,0.00,
+2026 shock (Mar-2026),Calendar beta-weighted,0.00,0.00,0.00,0.00,
+2026 shock (Mar-2026),"Spike exit + stop, vol-targeted",0.00,0.00,0.00,0.00,

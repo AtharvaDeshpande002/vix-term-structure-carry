@@ -1,0 +1,4 @@
+period,events,avg_net_usd,hit_rate,total_net_usd,baseline_avg_net_usd,baseline_hit_rate
+in-sample,9,114.44,0.44,1030.00,68.04,0.43
+out-of-sample,11,-386.82,0.55,-4255.00,-298.34,0.35
+all,20,-161.25,0.50,-3225.00,-137.90,0.39

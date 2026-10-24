@@ -1,0 +1,124 @@
+offset,mean,lo,hi,n,series
+-10,-1.725,-13.358,9.908,20,SR3 1y spread (pos1-pos5)
+-9,-1.213,-12.709,10.284,20,SR3 1y spread (pos1-pos5)
+-8,-0.575,-11.660,10.510,20,SR3 1y spread (pos1-pos5)
+-7,-0.825,-11.914,10.264,20,SR3 1y spread (pos1-pos5)
+-6,-2.250,-11.410,6.910,20,SR3 1y spread (pos1-pos5)
+-5,-3.075,-11.511,5.361,20,SR3 1y spread (pos1-pos5)
+-4,-2.663,-10.519,5.194,20,SR3 1y spread (pos1-pos5)
+-3,-5.138,-12.467,2.192,20,SR3 1y spread (pos1-pos5)
+-2,-4.250,-9.190,0.690,20,SR3 1y spread (pos1-pos5)
+-1,-1.725,-4.771,1.321,20,SR3 1y spread (pos1-pos5)
+0,0.000,0.000,0.000,20,SR3 1y spread (pos1-pos5)
+1,-1.213,-3.904,1.479,20,SR3 1y spread (pos1-pos5)
+2,-1.600,-5.249,2.049,20,SR3 1y spread (pos1-pos5)
+3,-3.538,-8.207,1.132,20,SR3 1y spread (pos1-pos5)
+4,-3.850,-8.851,1.151,20,SR3 1y spread (pos1-pos5)
+5,-1.600,-6.725,3.525,20,SR3 1y spread (pos1-pos5)
+6,-1.025,-5.634,3.584,20,SR3 1y spread (pos1-pos5)
+7,-2.563,-7.073,1.948,20,SR3 1y spread (pos1-pos5)
+8,-4.038,-8.902,0.827,20,SR3 1y spread (pos1-pos5)
+9,-2.775,-7.504,1.954,20,SR3 1y spread (pos1-pos5)
+10,-4.463,-9.726,0.801,20,SR3 1y spread (pos1-pos5)
+11,-4.125,-10.488,2.238,20,SR3 1y spread (pos1-pos5)
+12,-4.937,-12.186,2.311,20,SR3 1y spread (pos1-pos5)
+13,-6.675,-14.617,1.267,20,SR3 1y spread (pos1-pos5)
+14,-5.887,-14.957,3.182,20,SR3 1y spread (pos1-pos5)
+15,-8.025,-17.089,1.039,20,SR3 1y spread (pos1-pos5)
+16,-9.163,-18.750,0.425,20,SR3 1y spread (pos1-pos5)
+17,-7.612,-17.507,2.282,20,SR3 1y spread (pos1-pos5)
+18,-6.000,-17.268,5.268,20,SR3 1y spread (pos1-pos5)
+19,-6.025,-16.472,4.422,20,SR3 1y spread (pos1-pos5)
+20,-4.388,-15.616,6.841,20,SR3 1y spread (pos1-pos5)
+21,-4.600,-16.864,7.664,20,SR3 1y spread (pos1-pos5)
+22,-4.463,-16.840,7.915,20,SR3 1y spread (pos1-pos5)
+23,-2.838,-16.413,10.738,20,SR3 1y spread (pos1-pos5)
+24,-4.450,-18.363,9.463,20,SR3 1y spread (pos1-pos5)
+25,-4.162,-17.839,9.514,20,SR3 1y spread (pos1-pos5)
+26,-0.400,-14.066,13.266,20,SR3 1y spread (pos1-pos5)
+27,-3.613,-18.619,11.394,20,SR3 1y spread (pos1-pos5)
+28,-3.575,-20.457,13.307,20,SR3 1y spread (pos1-pos5)
+29,-4.338,-21.757,13.082,20,SR3 1y spread (pos1-pos5)
+30,-4.875,-23.870,14.120,20,SR3 1y spread (pos1-pos5)
+-10,3.725,-7.596,15.046,20,SR3 pos4 rate
+-9,3.375,-8.137,14.887,20,SR3 pos4 rate
+-8,2.900,-8.099,13.899,20,SR3 pos4 rate
+-7,2.800,-8.159,13.759,20,SR3 pos4 rate
+-6,4.350,-4.680,13.380,20,SR3 pos4 rate
+-5,5.200,-3.125,13.525,20,SR3 pos4 rate
+-4,4.525,-3.299,12.349,20,SR3 pos4 rate
+-3,5.750,-1.542,13.042,20,SR3 pos4 rate
+-2,4.725,-0.185,9.635,20,SR3 pos4 rate
+-1,2.100,-0.398,4.598,20,SR3 pos4 rate
+0,0.000,0.000,0.000,20,SR3 pos4 rate
+1,1.250,-1.351,3.851,20,SR3 pos4 rate
+2,1.500,-1.684,4.684,20,SR3 pos4 rate
+3,2.950,-1.123,7.023,20,SR3 pos4 rate
+4,2.825,-1.619,7.269,20,SR3 pos4 rate
+5,1.250,-3.717,6.217,20,SR3 pos4 rate
+6,0.950,-3.041,4.941,20,SR3 pos4 rate
+7,2.275,-1.586,6.136,20,SR3 pos4 rate
+8,3.775,-0.933,8.483,20,SR3 pos4 rate
+9,3.375,-1.143,7.893,20,SR3 pos4 rate
+10,5.250,0.125,10.375,20,SR3 pos4 rate
+11,5.450,-0.199,11.099,20,SR3 pos4 rate
+12,6.725,-0.196,13.646,20,SR3 pos4 rate
+13,8.600,1.026,16.174,20,SR3 pos4 rate
+14,8.100,-0.723,16.923,20,SR3 pos4 rate
+15,10.200,1.356,19.044,20,SR3 pos4 rate
+16,11.325,2.096,20.554,20,SR3 pos4 rate
+17,9.650,0.291,19.009,20,SR3 pos4 rate
+18,8.400,-2.266,19.066,20,SR3 pos4 rate
+19,7.900,-2.174,17.974,20,SR3 pos4 rate
+20,6.550,-4.156,17.256,20,SR3 pos4 rate
+21,6.500,-5.184,18.184,20,SR3 pos4 rate
+22,6.100,-5.544,17.744,20,SR3 pos4 rate
+23,4.400,-8.684,17.484,20,SR3 pos4 rate
+24,5.175,-8.507,18.857,20,SR3 pos4 rate
+25,4.550,-9.366,18.466,20,SR3 pos4 rate
+26,1.400,-12.838,15.638,20,SR3 pos4 rate
+27,4.375,-10.907,19.657,20,SR3 pos4 rate
+28,4.050,-12.865,20.965,20,SR3 pos4 rate
+29,4.675,-13.336,22.686,20,SR3 pos4 rate
+30,5.325,-13.726,24.376,20,SR3 pos4 rate
+-10,1.360,-6.523,9.243,25,ZQ 12m implied change
+-9,0.850,-7.277,8.977,25,ZQ 12m implied change
+-8,0.410,-7.456,8.276,25,ZQ 12m implied change
+-7,0.610,-7.021,8.241,25,ZQ 12m implied change
+-6,0.730,-5.285,6.745,25,ZQ 12m implied change
+-5,2.510,-2.801,7.821,25,ZQ 12m implied change
+-4,1.580,-3.087,6.247,25,ZQ 12m implied change
+-3,2.600,-1.406,6.606,25,ZQ 12m implied change
+-2,3.650,-0.003,7.303,25,ZQ 12m implied change
+-1,1.600,-0.595,3.795,25,ZQ 12m implied change
+0,0.000,0.000,0.000,25,ZQ 12m implied change
+1,0.760,-1.441,2.961,25,ZQ 12m implied change
+2,0.950,-1.867,3.767,25,ZQ 12m implied change
+3,2.440,-1.198,6.078,25,ZQ 12m implied change
+4,1.880,-2.141,5.901,25,ZQ 12m implied change
+5,0.080,-3.693,3.853,25,ZQ 12m implied change
+6,0.950,-2.988,4.888,25,ZQ 12m implied change
+7,0.760,-2.883,4.403,25,ZQ 12m implied change
+8,3.240,-0.674,7.154,25,ZQ 12m implied change
+9,3.390,-1.422,8.202,25,ZQ 12m implied change
+10,3.690,-1.781,9.161,25,ZQ 12m implied change
+11,5.470,-1.070,12.010,25,ZQ 12m implied change
+12,6.200,-0.815,13.215,25,ZQ 12m implied change
+13,7.010,-0.803,14.823,25,ZQ 12m implied change
+14,7.730,-0.207,15.667,25,ZQ 12m implied change
+15,8.670,-0.077,17.417,25,ZQ 12m implied change
+16,7.810,-0.821,16.441,25,ZQ 12m implied change
+17,5.920,-3.269,15.109,25,ZQ 12m implied change
+18,6.400,-1.900,14.700,25,ZQ 12m implied change
+19,5.540,-3.459,14.539,25,ZQ 12m implied change
+20,6.270,-3.473,16.013,25,ZQ 12m implied change
+21,5.430,-4.515,15.375,25,ZQ 12m implied change
+22,4.810,-6.172,15.792,25,ZQ 12m implied change
+23,7.310,-2.921,17.541,25,ZQ 12m implied change
+24,5.960,-4.243,16.163,25,ZQ 12m implied change
+25,6.570,-4.092,17.232,25,ZQ 12m implied change
+26,6.770,-4.637,18.177,25,ZQ 12m implied change
+27,7.630,-4.364,19.624,25,ZQ 12m implied change
+28,9.040,-3.393,21.473,25,ZQ 12m implied change
+29,11.570,-1.960,25.100,25,ZQ 12m implied change
+30,11.790,-2.021,25.601,25,ZQ 12m implied change

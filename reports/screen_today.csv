@@ -1,0 +1,10 @@
+measure,today,unit,percentile_vs_history
+Basis VX1 - VIX,-0.282,vol pts,14.7
+Slope VX2 - VX1,0.441,vol pts,24.6
+Contango ratio VX2/VX1 - 1,2.431,%,25.3
+Roll yield (basis / days),-0.141,vol pts/day,5.5
+Spot VIX,18.44,vol pts,61.1
+Constant-maturity 30d VX,18.6,vol pts,52.3
+VX1 - VX2 at 2 business days to expiry,-0.441,vol pts,80.7
+"Carry signal (contango > 7.5%, not inverted)",OFF,,
+"Carry signal, simplest robust version (contango > 0%)",ON,,

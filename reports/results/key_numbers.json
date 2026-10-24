@@ -1,0 +1,443 @@
+{
+ "sample_start": "2016-01-04",
+ "sample_end": "2026-10-19",
+ "contango_share": 0.8414275202354673,
+ "avg_roll_yield_contango": 0.0692732054298636,
+ "avg_basis_contango": 1.0229601312910286,
+ "avg_vrp": 4.514805940486158,
+ "vrp_positive_share": 0.8769544527532291,
+ "vrp_start": "2020-11-11",
+ "threshold": 0.075,
+ "stop": 2.0,
+ "n_events": 26,
+ "exits": {
+  "Short front, always": {
+   "spike": 0,
+   "stop": 0,
+   "filter": 0
+  },
+  "Short front, contango filter": {
+   "spike": 0,
+   "stop": 0,
+   "filter": 134
+  },
+  "+ spike exit": {
+   "spike": 16,
+   "stop": 0,
+   "filter": 111
+  },
+  "+ spike exit + stop": {
+   "spike": 16,
+   "stop": 3,
+   "filter": 106
+  },
+  "Calendar 1:1 (short VX1 / long VX2)": {
+   "spike": 16,
+   "stop": 0,
+   "filter": 111
+  },
+  "Calendar beta-weighted": {
+   "spike": 16,
+   "stop": 0,
+   "filter": 110
+  },
+  "Spike exit + stop, vol-targeted": {
+   "spike": 16,
+   "stop": 3,
+   "filter": 106
+  }
+ },
+ "events": [
+  "2016-06-13",
+  "2016-11-02",
+  "2017-04-06",
+  "2017-08-10",
+  "2018-02-02",
+  "2018-06-25",
+  "2018-10-09",
+  "2019-05-07",
+  "2019-08-05",
+  "2019-10-08",
+  "2020-01-27",
+  "2020-10-21",
+  "2021-01-27",
+  "2021-12-03",
+  "2022-01-21",
+  "2022-04-26",
+  "2022-09-21",
+  "2023-10-19",
+  "2024-04-15",
+  "2024-08-05",
+  "2024-09-18",
+  "2025-03-03",
+  "2025-10-15",
+  "2025-11-17",
+  "2026-02-05",
+  "2026-10-16"
+ ],
+ "Short front, always | in-sample": {
+  "sharpe": 0.42190663096347586,
+  "net_usd": 57471.200000000004,
+  "max_dd_usd": -67935.0,
+  "worst_day_usd": -17600.0,
+  "worst_week_usd": -36704.999999999985,
+  "trades": 1.0,
+  "hit_rate": 1.0,
+  "time_in_market": 0.9993386243386243
+ },
+ "Short front, always | out-of-sample": {
+  "sharpe": 0.5839406147762926,
+  "net_usd": 49543.499999999985,
+  "max_dd_usd": -23732.199999999997,
+  "worst_day_usd": -10245.9,
+  "worst_week_usd": -18293.4,
+  "trades": 0.0,
+  "hit_rate": NaN,
+  "time_in_market": 1.0
+ },
+ "Short front, always | full": {
+  "sharpe": 0.4806972700161916,
+  "net_usd": 107014.69999999998,
+  "max_dd_usd": -67935.0,
+  "worst_day_usd": -17600.0,
+  "worst_week_usd": -36704.999999999985,
+  "trades": 1.0,
+  "hit_rate": 1.0,
+  "time_in_market": 0.9996320824135394
+ },
+ "Short front, contango filter | in-sample": {
+  "sharpe": 0.4691962896528108,
+  "net_usd": 24545.200000000004,
+  "max_dd_usd": -8955.099999999999,
+  "worst_day_usd": -6193.200000000001,
+  "worst_week_usd": -6850.000000000002,
+  "trades": 54.0,
+  "hit_rate": 0.5185185185185185,
+  "time_in_market": 0.5383597883597884
+ },
+ "Short front, contango filter | out-of-sample": {
+  "sharpe": -0.21977068878809872,
+  "net_usd": -6784.200000000017,
+  "max_dd_usd": -20932.199999999997,
+  "worst_day_usd": -3709.7999999999997,
+  "worst_week_usd": -5485.600000000004,
+  "trades": 44.0,
+  "hit_rate": 0.3409090909090909,
+  "time_in_market": 0.3946932006633499
+ },
+ "Short front, contango filter | full": {
+  "sharpe": 0.21125846268958823,
+  "net_usd": 17760.999999999985,
+  "max_dd_usd": -21845.20000000002,
+  "worst_day_usd": -6193.200000000001,
+  "worst_week_usd": -6850.000000000002,
+  "trades": 98.0,
+  "hit_rate": 0.4387755102040816,
+  "time_in_market": 0.4746136865342163
+ },
+ "+ spike exit | in-sample": {
+  "sharpe": 0.560928167927023,
+  "net_usd": 28365.500000000007,
+  "max_dd_usd": -9725.000000000007,
+  "worst_day_usd": -6193.200000000001,
+  "worst_week_usd": -6850.000000000002,
+  "trades": 52.0,
+  "hit_rate": 0.5384615384615384,
+  "time_in_market": 0.5112433862433863
+ },
+ "+ spike exit | out-of-sample": {
+  "sharpe": -0.34314031528318667,
+  "net_usd": -10473.900000000014,
+  "max_dd_usd": -20932.199999999997,
+  "worst_day_usd": -3709.7999999999997,
+  "worst_week_usd": -5485.600000000004,
+  "trades": 43.0,
+  "hit_rate": 0.3488372093023256,
+  "time_in_market": 0.3864013266998342
+ },
+ "+ spike exit | full": {
+  "sharpe": 0.21858375701532654,
+  "net_usd": 17891.59999999999,
+  "max_dd_usd": -20932.20000000004,
+  "worst_day_usd": -6193.200000000001,
+  "worst_week_usd": -6850.000000000002,
+  "trades": 95.0,
+  "hit_rate": 0.45263157894736844,
+  "time_in_market": 0.45584988962472406
+ },
+ "+ spike exit + stop | in-sample": {
+  "sharpe": 0.5766781805834325,
+  "net_usd": 29020.500000000007,
+  "max_dd_usd": -9725.000000000007,
+  "worst_day_usd": -6193.200000000001,
+  "worst_week_usd": -6850.000000000002,
+  "trades": 52.0,
+  "hit_rate": 0.5576923076923077,
+  "time_in_market": 0.5092592592592593
+ },
+ "+ spike exit + stop | out-of-sample": {
+  "sharpe": -0.26957649848693266,
+  "net_usd": -8152.300000000014,
+  "max_dd_usd": -18867.300000000003,
+  "worst_day_usd": -3709.7999999999997,
+  "worst_week_usd": -5485.600000000004,
+  "trades": 42.0,
+  "hit_rate": 0.35714285714285715,
+  "time_in_market": 0.3839137645107794
+ },
+ "+ spike exit + stop | full": {
+  "sharpe": 0.2565573455911609,
+  "net_usd": 20868.19999999999,
+  "max_dd_usd": -18867.30000000003,
+  "worst_day_usd": -6193.200000000001,
+  "worst_week_usd": -6850.000000000002,
+  "trades": 94.0,
+  "hit_rate": 0.46808510638297873,
+  "time_in_market": 0.45364238410596025
+ },
+ "Calendar 1:1 (short VX1 / long VX2) | in-sample": {
+  "sharpe": -0.3312317882187821,
+  "net_usd": -5809.399999999992,
+  "max_dd_usd": -12180.0,
+  "worst_day_usd": -1909.9999999999995,
+  "worst_week_usd": -2264.9999999999995,
+  "trades": 52.0,
+  "hit_rate": 0.38461538461538464,
+  "time_in_market": 0.5112433862433863
+ },
+ "Calendar 1:1 (short VX1 / long VX2) | out-of-sample": {
+  "sharpe": -1.7943812013617948,
+  "net_usd": -18624.400000000023,
+  "max_dd_usd": -19010.100000000013,
+  "worst_day_usd": -1357.3999999999985,
+  "worst_week_usd": -1850.0000000000005,
+  "trades": 43.0,
+  "hit_rate": 0.18604651162790697,
+  "time_in_market": 0.3864013266998342
+ },
+ "Calendar 1:1 (short VX1 / long VX2) | full": {
+  "sharpe": -0.865784784259862,
+  "net_usd": -24433.80000000001,
+  "max_dd_usd": -26918.80000000001,
+  "worst_day_usd": -1909.9999999999995,
+  "worst_week_usd": -2264.9999999999995,
+  "trades": 95.0,
+  "hit_rate": 0.29473684210526313,
+  "time_in_market": 0.45584988962472406
+ },
+ "Calendar beta-weighted | in-sample": {
+  "sharpe": -1.3769602167247088,
+  "net_usd": -18969.487999999994,
+  "max_dd_usd": -20956.932999999968,
+  "worst_day_usd": -1048.474999999999,
+  "worst_week_usd": -1848.0999999999997,
+  "trades": 51.0,
+  "hit_rate": 0.2549019607843137,
+  "time_in_market": 0.503968253968254
+ },
+ "Calendar beta-weighted | out-of-sample": {
+  "sharpe": -2.8777856864509586,
+  "net_usd": -21424.372000000025,
+  "max_dd_usd": -21472.502000000033,
+  "worst_day_usd": -941.5459999999982,
+  "worst_week_usd": -1528.5659999999996,
+  "trades": 43.0,
+  "hit_rate": 0.09302325581395349,
+  "time_in_market": 0.3864013266998342
+ },
+ "Calendar beta-weighted | full": {
+  "sharpe": -1.8709748564990816,
+  "net_usd": -40393.860000000015,
+  "max_dd_usd": -42216.71000000002,
+  "worst_day_usd": -1048.474999999999,
+  "worst_week_usd": -1848.0999999999997,
+  "trades": 94.0,
+  "hit_rate": 0.18085106382978725,
+  "time_in_market": 0.4518027961736571
+ },
+ "Spike exit + stop, vol-targeted | in-sample": {
+  "sharpe": 0.3362703609415756,
+  "net_usd": 20610.500000000007,
+  "max_dd_usd": -18930.00000000002,
+  "worst_day_usd": -11715.000000000002,
+  "worst_week_usd": -13972.5,
+  "trades": 52.0,
+  "hit_rate": 0.5384615384615384,
+  "time_in_market": 0.5092592592592593
+ },
+ "Spike exit + stop, vol-targeted | out-of-sample": {
+  "sharpe": -0.3060171096209995,
+  "net_usd": -12125.80000000002,
+  "max_dd_usd": -25992.999999999996,
+  "worst_day_usd": -6618.200000000002,
+  "worst_week_usd": -6564.399999999998,
+  "trades": 42.0,
+  "hit_rate": 0.35714285714285715,
+  "time_in_market": 0.3839137645107794
+ },
+ "Spike exit + stop, vol-targeted | full": {
+  "sharpe": 0.08363448176118853,
+  "net_usd": 8484.699999999983,
+  "max_dd_usd": -25993.00000000001,
+  "worst_day_usd": -11715.000000000002,
+  "worst_week_usd": -13972.5,
+  "trades": 94.0,
+  "hit_rate": 0.4574468085106383,
+  "time_in_market": 0.45364238410596025
+ },
+ "best_variant": "+ spike exit + stop",
+ "tails": {
+  "Aug-2015 (China deval)": {
+   "Short front, always": NaN,
+   "+ spike exit + stop": NaN,
+   "Calendar 1:1 (short VX1 / long VX2)": NaN
+  },
+  "Feb-2018 (Volmageddon)": {
+   "Short front, always": -9905.0,
+   "+ spike exit + stop": 0.0,
+   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+  },
+  "Mar-2020 (Covid)": {
+   "Short front, always": -35635.0,
+   "+ spike exit + stop": 0.0,
+   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+  },
+  "Aug-2024 (yen carry)": {
+   "Short front, always": 1057.8000000000006,
+   "+ spike exit + stop": 1545.9999999999995,
+   "Calendar 1:1 (short VX1 / long VX2)": -148.20000000000067
+  },
+  "Apr-2025 (tariff shock)": {
+   "Short front, always": -9125.700000000003,
+   "+ spike exit + stop": 0.0,
+   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+  },
+  "2026 shock (Mar-2026)": {
+   "Short front, always": -1250.699999999999,
+   "+ spike exit + stop": 0.0,
+   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+  }
+ },
+ "aug2015_proxy": {
+  "contract": "VXF16",
+  "pnl_usd": -4855.0,
+  "worst_day_usd": -1974.999999999998,
+  "max_dd_usd": -6724.999999999999
+ },
+ "event +30d SR3 1y spread (pos1-pos5)": {
+  "mean": -4.875000000000043,
+  "lo": -23.869740470096364,
+  "hi": 14.119740470096279,
+  "n": 20
+ },
+ "event +10d SR3 1y spread (pos1-pos5)": {
+  "mean": -4.462500000000068,
+  "lo": -9.725848057682969,
+  "hi": 0.800848057682833,
+  "n": 20
+ },
+ "event +30d SR3 pos4 rate": {
+  "mean": 5.32500000000006,
+  "lo": -13.726026344779214,
+  "hi": 24.376026344779333,
+  "n": 20
+ },
+ "event +10d SR3 pos4 rate": {
+  "mean": 5.249999999999986,
+  "lo": 0.1253648653628776,
+  "hi": 10.374635134637094,
+  "n": 20
+ },
+ "event +30d ZQ 12m implied change": {
+  "mean": 11.790000000000589,
+  "lo": -2.021328365752863,
+  "hi": 25.601328365754043,
+  "n": 25
+ },
+ "event +10d ZQ 12m implied change": {
+  "mean": 3.6900000000004503,
+  "lo": -1.7813702208246842,
+  "hi": 9.161370220825585,
+  "n": 25
+ },
+ "leadlag_lag0": 0.14963214105188627,
+ "leadlag_max_abs_nonzero": {
+  "lag": -10,
+  "corr": -0.08188028575042744
+ },
+ "granger_min_p": {
+  "VX slope -> SR3 pos2": 0.012893692981196801,
+  "SR3 pos2 -> VX slope": 0.19115189338600377
+ },
+ "sr3_translation": [
+  {
+   "period": "in-sample",
+   "events": 9,
+   "avg_net_usd": 114.44444444443545,
+   "hit_rate": 0.4444444444444444,
+   "total_net_usd": 1029.999999999919,
+   "baseline_avg_net_usd": 68.03841991341888,
+   "baseline_hit_rate": 0.4296536796536797
+  },
+  {
+   "period": "out-of-sample",
+   "events": 11,
+   "avg_net_usd": -386.81818181818676,
+   "hit_rate": 0.5454545454545454,
+   "total_net_usd": -4255.000000000055,
+   "baseline_avg_net_usd": -298.3389544688008,
+   "baseline_hit_rate": 0.35160202360876897
+  },
+  {
+   "period": "all",
+   "events": 20,
+   "avg_net_usd": -161.25000000000676,
+   "hit_rate": 0.5,
+   "total_net_usd": -3225.000000000135,
+   "baseline_avg_net_usd": -137.896919431279,
+   "baseline_hit_rate": 0.385781990521327
+  }
+ ],
+ "stress_weeks": {
+  "pos1": {
+   "diff_bp": -0.40428380187415136,
+   "t": -1.3598400604167535,
+   "n_stress": 27
+  },
+  "pos2": {
+   "diff_bp": -5.016309683177417,
+   "t": -2.0584219680925555,
+   "n_stress": 27
+  },
+  "pos3": {
+   "diff_bp": -7.726238286479288,
+   "t": -2.2731450712011023,
+   "n_stress": 27
+  },
+  "pos4": {
+   "diff_bp": -9.481659973226158,
+   "t": -2.39839178879117,
+   "n_stress": 27
+  },
+  "pos5": {
+   "diff_bp": -10.390004462293671,
+   "t": -2.476012785685409,
+   "n_stress": 27
+  },
+  "pos6": {
+   "diff_bp": -10.771352074966506,
+   "t": -2.518561401630699,
+   "n_stress": 27
+  },
+  "pos7": {
+   "diff_bp": -10.972467648371442,
+   "t": -2.638118326170654,
+   "n_stress": 27
+  },
+  "pos8": {
+   "diff_bp": -10.356314145470723,
+   "t": -2.635806396546624,
+   "n_stress": 27
+  }
+ }
+}

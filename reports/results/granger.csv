@@ -1,0 +1,11 @@
+lag,F,p_value,test
+1,2.0927,0.1482,VX slope -> SR3 pos2
+2,4.3600,0.0129,VX slope -> SR3 pos2
+3,3.1325,0.0247,VX slope -> SR3 pos2
+4,2.6265,0.0330,VX slope -> SR3 pos2
+5,1.9675,0.0805,VX slope -> SR3 pos2
+1,1.7098,0.1912,SR3 pos2 -> VX slope
+2,0.7759,0.4604,SR3 pos2 -> VX slope
+3,1.2404,0.2935,SR3 pos2 -> VX slope
+4,0.7323,0.5699,SR3 pos2 -> VX slope
+5,0.6421,0.6676,SR3 pos2 -> VX slope
