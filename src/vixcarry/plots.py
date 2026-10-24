@@ -6,10 +6,12 @@ the FINDING (computed from the results, never typed by hand), units on every axi
 from __future__ import annotations
 
 import pathlib
+import sys
 
 import matplotlib
 
-matplotlib.use("Agg")
+if "ipykernel" not in sys.modules:  # scripts render straight to files; the notebook keeps its inline backend
+    matplotlib.use("Agg")
 import matplotlib.dates as mdates  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
@@ -20,7 +22,8 @@ BLUE, ORANGE, AQUA, YELLOW, MAGENTA, GREEN, VIOLET, RED = (
     "#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948")
 INK, INK2, MUTED, GRID, AXIS = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 SOURCE = "Source: Bloomberg settlement data; author's calculations"
-STRAT_COLOURS = {"Short front, always": BLUE, "+ spike exit + stop": ORANGE, "Calendar 1:1 (short VX1 / long VX2)": AQUA}
+STRAT_COLOURS = {"Short front, always": BLUE, "+ spike exit + stop": ORANGE, "Calendar 1:1 (short VX1 / long VX2)": AQUA,
+                 "Contango > 0 + spike exit + stop": VIOLET}
 
 
 def style() -> None:
@@ -141,9 +144,9 @@ def equity_curves(o, cfg, path=None):
     ax.axhline(0, color=AXIS, lw=0.8)
     ax.set_ylabel("cumulative net P&L, 1 contract ($ thousands)")
     a = k["Short front, always | full"]
-    b = k["+ spike exit + stop | full"]
-    ax.set_title(f"Always-short earns the most (Sharpe {a['sharpe']:.2f}) but pays for it: {usd(a['max_dd_usd'])} drawdown "
-                 f"vs {usd(b['max_dd_usd'])} with the exits")
+    b = k["Contango > 0 + spike exit + stop | full"]
+    ax.set_title(f"Always-short earns the most (Sharpe {a['sharpe']:.2f}) but pays for it with a {usd(a['max_dd_usd'])} drawdown; "
+                 f"the simple exits keep Sharpe {b['sharpe']:.2f} at {usd(b['max_dd_usd'])}", fontsize=11.5)
     ax.legend(loc="upper left")
     _annotate(ax, cfg, keys=["Feb-2018", "Mar-2020", "Aug-2024", "Apr-2025", "2026 shock"])
     ax.xaxis.set_major_locator(mdates.YearLocator()); ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
@@ -155,19 +158,21 @@ def tail_chart(o, cfg, path=None):
     wins = [w for w in cfg["tails"] if not t[t.window == w].pnl_usd.isna().all()]
     names = list(STRAT_COLOURS)
     x = np.arange(len(wins))
-    w = 0.26
-    fig, ax = plt.subplots(figsize=(11, 4.8))
+    w = 0.8 / len(names)
+    fig, ax = plt.subplots(figsize=(11.5, 5))
     for i, n in enumerate(names):
         v = [t[(t.window == win) & (t.strategy == n)].max_dd_usd.iloc[0] / 1000 for win in wins]
-        ax.bar(x + (i - 1) * w, v, width=w - 0.02, color=STRAT_COLOURS[n], label=n)
-        for xi, vi in zip(x + (i - 1) * w, v):  # label every bar; a zero bar means "was flat"
+        xs = x + (i - (len(names) - 1) / 2) * w
+        ax.bar(xs, v, width=w - 0.02, color=STRAT_COLOURS[n], label=n)
+        for xi, vi in zip(xs, v):  # label every bar; a zero bar means "was flat"
             ax.text(xi, vi - 0.8, "flat" if abs(vi) < 0.05 else f"{vi:,.1f}", ha="center", va="top", fontsize=7.5, color=INK2)
     ax.set_xticks(x, [s.replace(" (", "\n(") for s in wins])
     ax.axhline(0, color=AXIS, lw=0.8)
     ax.set_ylabel("worst drawdown inside the window ($ thousands, 1 contract)")
     worst = t[t.strategy == "Short front, always"].set_index("window").max_dd_usd
-    ax.set_title(f"Carry is paid for tail risk: always-short lost up to {usd(worst.min())} per contract in {worst.idxmin().split(' (')[0]}; "
-                 "the exits sat out every shock")
+    ref = t[t.strategy == "Contango > 0 + spike exit + stop"].set_index("window").max_dd_usd.dropna()
+    ax.set_title(f"Always-short drew down {usd(worst.min())} per contract in {worst.idxmin().split(' (')[0]}; "
+                 f"simple exits cap the worst window at {usd(ref.min())} (one overnight gap)")
     ax.legend(loc="lower right")
     ax.grid(axis="x", visible=False)
     p = o.get("aug2015_proxy")

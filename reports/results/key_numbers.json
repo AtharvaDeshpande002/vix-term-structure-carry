@@ -31,6 +31,11 @@
    "stop": 3,
    "filter": 106
   },
+  "Contango > 0 + spike exit + stop": {
+   "spike": 57,
+   "stop": 3,
+   "filter": 4
+  },
   "Calendar 1:1 (short VX1 / long VX2)": {
    "spike": 16,
    "stop": 0,
@@ -195,6 +200,36 @@
   "hit_rate": 0.46808510638297873,
   "time_in_market": 0.45364238410596025
  },
+ "Contango > 0 + spike exit + stop | in-sample": {
+  "sharpe": 0.46509078332340476,
+  "net_usd": 35439.7,
+  "max_dd_usd": -19775.000000000007,
+  "worst_day_usd": -13254.999999999998,
+  "worst_week_usd": -14004.999999999998,
+  "trades": 38.0,
+  "hit_rate": 0.47368421052631576,
+  "time_in_market": 0.7513227513227513
+ },
+ "Contango > 0 + spike exit + stop | out-of-sample": {
+  "sharpe": 0.3205164183868445,
+  "net_usd": 17422.199999999983,
+  "max_dd_usd": -26144.800000000003,
+  "worst_day_usd": -10298.4,
+  "worst_week_usd": -10350.9,
+  "trades": 24.0,
+  "hit_rate": 0.5416666666666666,
+  "time_in_market": 0.7661691542288557
+ },
+ "Contango > 0 + spike exit + stop | full": {
+  "sharpe": 0.4043507022906285,
+  "net_usd": 52861.89999999998,
+  "max_dd_usd": -26144.800000000032,
+  "worst_day_usd": -13254.999999999998,
+  "worst_week_usd": -14004.999999999998,
+  "trades": 62.0,
+  "hit_rate": 0.5,
+  "time_in_market": 0.7579102281089036
+ },
  "Calendar 1:1 (short VX1 / long VX2) | in-sample": {
   "sharpe": -0.3312317882187821,
   "net_usd": -5809.399999999992,
@@ -288,34 +323,136 @@
  "best_variant": "+ spike exit + stop",
  "tails": {
   "Aug-2015 (China deval)": {
-   "Short front, always": NaN,
-   "+ spike exit + stop": NaN,
-   "Calendar 1:1 (short VX1 / long VX2)": NaN
+   "Short front, always": {
+    "pnl_usd": NaN,
+    "max_dd_usd": NaN,
+    "worst_day_usd": NaN
+   },
+   "+ spike exit + stop": {
+    "pnl_usd": NaN,
+    "max_dd_usd": NaN,
+    "worst_day_usd": NaN
+   },
+   "Contango > 0 + spike exit + stop": {
+    "pnl_usd": NaN,
+    "max_dd_usd": NaN,
+    "worst_day_usd": NaN
+   },
+   "Calendar 1:1 (short VX1 / long VX2)": {
+    "pnl_usd": NaN,
+    "max_dd_usd": NaN,
+    "worst_day_usd": NaN
+   }
   },
   "Feb-2018 (Volmageddon)": {
-   "Short front, always": -9905.0,
-   "+ spike exit + stop": 0.0,
-   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+   "Short front, always": {
+    "pnl_usd": -9905.0,
+    "max_dd_usd": -20900.0,
+    "worst_day_usd": -17600.0
+   },
+   "+ spike exit + stop": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   },
+   "Contango > 0 + spike exit + stop": {
+    "pnl_usd": -3057.4999999999973,
+    "max_dd_usd": -3157.4999999999964,
+    "worst_day_usd": -1402.499999999998
+   },
+   "Calendar 1:1 (short VX1 / long VX2)": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   }
   },
   "Mar-2020 (Covid)": {
-   "Short front, always": -35635.0,
-   "+ spike exit + stop": 0.0,
-   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+   "Short front, always": {
+    "pnl_usd": -35635.0,
+    "max_dd_usd": -67680.0,
+    "worst_day_usd": -15250.0
+   },
+   "+ spike exit + stop": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   },
+   "Contango > 0 + spike exit + stop": {
+    "pnl_usd": -6902.500000000002,
+    "max_dd_usd": -6902.500000000002,
+    "worst_day_usd": -3149.9999999999986
+   },
+   "Calendar 1:1 (short VX1 / long VX2)": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   }
   },
   "Aug-2024 (yen carry)": {
-   "Short front, always": 1057.8000000000006,
-   "+ spike exit + stop": 1545.9999999999995,
-   "Calendar 1:1 (short VX1 / long VX2)": -148.20000000000067
+   "Short front, always": {
+    "pnl_usd": 1057.8000000000006,
+    "max_dd_usd": -16126.399999999994,
+    "worst_day_usd": -10245.9
+   },
+   "+ spike exit + stop": {
+    "pnl_usd": 1545.9999999999995,
+    "max_dd_usd": -990.9000000000015,
+    "worst_day_usd": -990.8999999999999
+   },
+   "Contango > 0 + spike exit + stop": {
+    "pnl_usd": -9586.399999999998,
+    "max_dd_usd": -11184.900000000001,
+    "worst_day_usd": -10298.4
+   },
+   "Calendar 1:1 (short VX1 / long VX2)": {
+    "pnl_usd": -148.20000000000067,
+    "max_dd_usd": -314.4000000000051,
+    "worst_day_usd": -252.90000000000032
+   }
   },
   "Apr-2025 (tariff shock)": {
-   "Short front, always": -9125.700000000003,
-   "+ spike exit + stop": 0.0,
-   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+   "Short front, always": {
+    "pnl_usd": -9125.700000000003,
+    "max_dd_usd": -20196.50000000003,
+    "worst_day_usd": -7318.3
+   },
+   "+ spike exit + stop": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   },
+   "Contango > 0 + spike exit + stop": {
+    "pnl_usd": 33.20000000000121,
+    "max_dd_usd": -52.5,
+    "worst_day_usd": -52.5
+   },
+   "Calendar 1:1 (short VX1 / long VX2)": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   }
   },
   "2026 shock (Mar-2026)": {
-   "Short front, always": -1250.699999999999,
-   "+ spike exit + stop": 0.0,
-   "Calendar 1:1 (short VX1 / long VX2)": 0.0
+   "Short front, always": {
+    "pnl_usd": -1250.699999999999,
+    "max_dd_usd": -10283.699999999997,
+    "worst_day_usd": -3991.9999999999973
+   },
+   "+ spike exit + stop": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   },
+   "Contango > 0 + spike exit + stop": {
+    "pnl_usd": -1342.2999999999977,
+    "max_dd_usd": -2349.5,
+    "worst_day_usd": -1173.6000000000004
+   },
+   "Calendar 1:1 (short VX1 / long VX2)": {
+    "pnl_usd": 0.0,
+    "max_dd_usd": 0.0,
+    "worst_day_usd": 0.0
+   }
   }
  },
  "aug2015_proxy": {

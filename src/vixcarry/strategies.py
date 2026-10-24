@@ -135,6 +135,9 @@ def default_specs(threshold: float, stop: float) -> list[CarrySpec]:
         CarrySpec("Short front, contango filter", "front", threshold),
         CarrySpec("+ spike exit", "front", threshold, spike_exit=True),
         CarrySpec("+ spike exit + stop", "front", threshold, spike_exit=True, stop_volpts=stop),
+        # the parameter-free reading of the rule ("short whenever the curve slopes up"), NOT chosen in-sample;
+        # shown so the reader can compare the optimised rule with the obvious one
+        CarrySpec("Contango > 0 + spike exit + stop", "front", 0.0, spike_exit=True, stop_volpts=stop),
         CarrySpec("Calendar 1:1 (short VX1 / long VX2)", "calendar", threshold, spike_exit=True),
         CarrySpec("Calendar beta-weighted", "calendar_beta", threshold, spike_exit=True),
         CarrySpec("Spike exit + stop, vol-targeted", "front", threshold, spike_exit=True, stop_volpts=stop, vol_target=True),

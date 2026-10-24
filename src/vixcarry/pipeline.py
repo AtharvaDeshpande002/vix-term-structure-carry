@@ -192,7 +192,9 @@ def key_numbers(o: dict, cfg: dict) -> dict:
                                     for x in ["sharpe", "net_usd", "max_dd_usd", "worst_day_usd", "worst_week_usd", "trades", "hit_rate", "time_in_market"]}
     k["best_variant"] = best
     tl = o["tails"].set_index(["window", "strategy"])
-    k["tails"] = {w: {s_: float(tl.loc[(w, s_), "pnl_usd"]) for s_ in ["Short front, always", best, "Calendar 1:1 (short VX1 / long VX2)"]}
+    k["tails"] = {w: {s_: {"pnl_usd": float(tl.loc[(w, s_), "pnl_usd"]), "max_dd_usd": float(tl.loc[(w, s_), "max_dd_usd"]),
+                           "worst_day_usd": float(tl.loc[(w, s_), "worst_day_usd"])}
+                      for s_ in ["Short front, always", best, "Contango > 0 + spike exit + stop", "Calendar 1:1 (short VX1 / long VX2)"]}
                   for w in cfg["tails"]}
     if "aug2015_proxy" in o:
         k["aug2015_proxy"] = o["aug2015_proxy"]
