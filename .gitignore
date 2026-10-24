@@ -1,0 +1,13 @@
+# licensed market data: never committed (see data/README.md)
+data/raw/
+data/interim/
+*.xlsx
+*.xlsm
+*.db
+*.sqlite
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/

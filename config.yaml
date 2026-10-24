@@ -1,0 +1,73 @@
+# Every parameter of the project lives here. Change a number here, re-run scripts/run_all.py, and every
+# table, chart and the report follow.
+
+paths:
+  raw: data/raw                 # input CSVs (not committed, see data/README.md)
+  interim: data/interim         # cached intermediate tables (not committed)
+  results: reports/results      # small derived result tables (committed)
+  figures: reports/figures      # static PNG charts (committed)
+  report: reports/report.html   # interactive Plotly report (committed, published with GitHub Pages)
+
+sample:
+  start: "2016-01-04"           # first day spot VIX exists in the data AND a true front VX contract is listed
+  end: null                     # null = last date in the data
+  in_sample_end: "2021-12-31"   # parameters are chosen on 2016-2021 only ...
+  out_of_sample_start: "2022-01-03"  # ... and judged on 2022 onward (headline numbers)
+
+term_structure:
+  cm_days: [30, 60, 90]         # constant-maturity points built by interpolation (calendar days)
+  rv_window: 21                 # trading days of S&P 500 returns used for realised volatility
+  trading_days_per_year: 252
+
+vx:
+  multiplier: 1000              # $ per vol point per contract
+  tick: 0.05                    # vol points
+  tick_value: 50                # $ per tick
+  commission: 2.50              # $ per contract per side
+  slippage_ticks: 1             # ticks paid per contract per side (half the bid/offer plus a little)
+  roll_bdays: 5                 # hold the nearest contract with MORE than this many business days to expiry
+
+sr3:
+  multiplier: 25                # $ per bp per contract
+  tick_bp: 0.5                  # 0.005 price = 0.5 bp
+  commission: 2.50
+  slippage_ticks: 1
+  positions: 8                  # SR3 quarterly positions used for the cross-asset work
+
+carry:
+  contango_threshold: 0.05      # short only when VX2/VX1 - 1 is above this (default; re-chosen in-sample)
+  threshold_grid: [0.0, 0.025, 0.05, 0.075, 0.10]
+  spike_exit_vix_jump: 0.20     # go flat if spot VIX rises more than 20% in one day ...
+  cooldown_days: 5              # ... and stay flat for this many business days
+  stop_grid: [1.0, 1.5, 2.0, 3.0]  # stop a trade once it has lost this many vol points per contract (re-chosen in-sample)
+  vol_target_daily_usd: 1000    # vol-targeted variant: aim for ~$1,000 daily P&L standard deviation
+  vol_lookback: 20              # trading days used to estimate each contract's daily P&L volatility
+  max_contracts: 10             # hard cap on position size
+  hedge_beta_window: 60         # days used to estimate the VX2/VX1 hedge ratio of the ratio calendar
+
+tails:                          # crisis windows for the mandatory tail analysis (inclusive)
+  "Aug-2015 (China deval)": ["2015-08-17", "2015-09-30"]
+  "Feb-2018 (Volmageddon)": ["2018-01-26", "2018-03-09"]
+  "Mar-2020 (Covid)": ["2020-02-20", "2020-04-30"]
+  "Aug-2024 (yen carry)": ["2024-07-29", "2024-08-30"]
+  "Apr-2025 (tariff shock)": ["2025-03-28", "2025-05-09"]
+  "2026 shock (Mar-2026)": ["2026-02-27", "2026-04-17"]
+
+events:
+  min_contango_days: 20         # an inversion counts only after at least 20 days of contango
+  pre: 10                       # event window: 10 business days before ...
+  post: 30                      # ... to 30 after
+  cond_week_vix_rise: 5.0       # "stress week" = spot VIX up more than 5 points over the week
+  max_lag: 10                   # lead-lag: cross-correlation lags -10..+10
+  granger_maxlag: 5
+  sr3_trade_position: 4         # translation trade: buy (receive) the 4th SR3 quarterly contract ...
+  sr3_hold_days: 20             # ... and hold it 20 business days
+
+annotations:                    # vertical markers on time-series charts
+  "Feb-2018": "2018-02-05"
+  "Mar-2020": "2020-03-16"
+  "Hikes start": "2022-03-16"
+  "First cut": "2024-09-18"
+  "Aug-2024": "2024-08-05"
+  "Apr-2025": "2025-04-08"
+  "2026 shock": "2026-03-06"
