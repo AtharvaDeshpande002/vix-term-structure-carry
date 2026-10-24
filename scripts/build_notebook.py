@@ -92,6 +92,10 @@ filter tuned on six years of history mostly learned the noise of those years."""
 cols = ["strategy", "period", "trades", "hit_rate", "net_usd", "sharpe", "max_dd_usd", "worst_day_usd", "costs_usd"]
 s[s.period != "full"][cols]"""),
     code("""plots.equity_curves(o, cfg);"""),
+    md("""Where does the money go? Gross P&L versus costs over the full sample. The calendar spreads trade two legs on
+every entry, exit and roll, so costs matter twice as much."""),
+    code("""f = s[s.period == "full"].set_index("strategy")[["gross_usd", "costs_usd", "net_usd", "sharpe", "time_in_market"]]
+f.round(2)"""),
     md("""### Tail analysis (mandatory)
 
 Carry is paid for tail risk. The table shows what each strategy did inside each crisis window: P&L, worst day,
@@ -144,7 +148,8 @@ business days, net of costs, versus doing the same trade on every day (the basel
 3. **Simple defences work, tuned ones don't.** "Short only in contango, flat after an inversion or a 20% VIX jump"
    cut the worst crisis drawdown sharply and kept a positive out-of-sample Sharpe. The in-sample-optimised
    threshold failed out of sample: a lesson about over-fitting.
-4. **Calendar spreads (short VX1 / long VX2) lose**: VX2 rolls down too, so the long leg gives the carry back.
+4. **Calendar spreads (short VX1 / long VX2) lose net**: VX2 rolls down too, so the long leg gives most of the
+   carry back; the small gross profit left is smaller than the cost of trading two legs on every entry, exit and roll.
 5. **VIX and SOFR move on the same day, not in sequence.** Stress weeks come with a significant SR3 rally, but by
    the time the VX curve inverts most of it has happened; buying SR3 after an inversion did not beat the baseline
    out of sample."""),
